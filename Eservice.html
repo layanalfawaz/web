@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bright Spa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<script src="script.js"></script>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="brand">
+      <img src="images/logo1.png" alt="Bright Spa Logo" class="logo"/>
+      <h1>Bright Spa</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index1.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="customer.html" class="active">Customer</a></li>
+        <li><a href="provider.html">Provider</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+   <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:16px">
+  <ol style="list-style:none; display:flex; gap:8px;">
+      <li><a href="index1.html">Home</a></li>
+        <li aria-hidden="true">›</li>
+         <li><a href="customer.html">Customer</a></li>
+        <li aria-hidden="true">›</li>
+      <li aria-current="page">Evaluate Service</li>
+</ol>
+  </nav>
+
+  <!-- Service Evaluation Form -->
+  <section class="evaluate-section">
+    <div class="form-box">
+    <h2>Service Evaluation</h2>
+      <form class="evaluate-form" action="Eservice.html">
+        <label for="select-service">Select Service:</label>
+      <select id="select-service">
+          <option>Select Service:</option>
+        <option>Hair Treatment</option>
+           <option>Hair Cut</option>
+          <option>Wood Massage</option>
+           <option>Swedish Massage</option>
+          <option>Nail Removal</option>
+           <option>Acrylic Nails</option>
+        </select>
+
+        <label>Rate the Service:</label>
+        <div class="star-rating">
+        <input type="radio" id="star5" name="rating" value="5" /><label for="star5">★</label>
+          <input type="radio" id="star4" name="rating" value="4" /><label for="star4">★</label>
+          <input type="radio" id="star3" name="rating" value="3" /><label for="star3">★</label>
+          <input type="radio" id="star2" name="rating" value="2" /><label for="star2">★</label>
+          <input type="radio" id="star1" name="rating" value="1" /><label for="star1">★</label>
+        </div>
+
+        <label for="feedback">Feedback:</label>
+         <textarea id="feedback" rows="3" placeholder="Share your experience..."></textarea>
+        <input type="submit" value="Submit Evaluation">
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-contact">
+      <h2>Contact Us</h2>
+      <p>
+        We’d love to hear from you! Whether you have a question about our services,
+        want to book an appointment, or simply need more information,
+        our team is here to help. Reach out to us anytime.
+      </p>
+      <p>✆ +96650886681</p>
+      <p>✉ BrightSpa@gmail.com</p>
+      <br>
+    </div>
+
+    <div class="footer-bottom">
+      <hr>
+      <p>© Bright Spa All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+

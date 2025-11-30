@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+
+<title>Bright Spa</title>
+<link href="style.css" rel="stylesheet"/>
+<script src="script.js"></script>
+</head>
+<body>
+<!-- ===== Header ===== -->
+<header>
+<div class="brand">
+<img src="images/logo1.png" alt="Bright Spa Logo" class="logo"/>
+<h1>Bright Spa</h1>
+</div>
+<nav>
+<ul>
+<li><a href="index1.html">Home</a></li>
+<li><a class="active" href="about.html">About Us</a></li>
+<li><a href="Services.html">Services</a></li>
+<li><a href="customer.html">Customer</a></li>
+<li><a href="provider.html">Provider</a></li>
+</ul>
+</nav>
+</header>
+ <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:16px">
+      <ol style="list-style:none; display:flex; gap:8px;">
+        <li><a href="index1.html">Home</a></li>
+        <li aria-hidden="true">›</li>
+        <li aria-current="page">About us</li>
+      </ol>
+    </nav>
+<main class="page-wrap">
+
+<!-- ===== About Section ===== -->
+<section class="about-section">
+<h2>About Us</h2>
+<p>
+        At <strong>Bright Spa</strong>, we believe self-care is more than luxury — it’s a way to reset.
+        Our mission is to blend relaxation and professional care in every visit.
+      </p>
+</section>
+<!-- ===== Meet Our Staff (Horizontal Scroll Only) ===== -->
+
+<section class="staff-section">
+<h2>Meet Our Staff</h2>
+<p>Our expert team makes every visit relaxing and unforgettable.</p>
+
+<div class="staff-scroller">
+  <!-- Sarah -->
+  <div class="member">
+    
+      <img src="images/staff1.png" alt="Sarah Ahmed" />
+   
+    <div class="name"><a href="staff-sarah.html">Sarah Ahmed</a></div>
+    <div class="role">Hair Expert</div>
+  </div>
+
+  <!-- Lina -->
+  <div class="member">
+    
+      <img src="images/staff2.png" alt="Lina Al-Harbi" />
+  
+    <div class="name"><a href="staff-lina.html">Lina Al-Harbi</a></div>
+    <div class="role">Massage Therapist</div>
+  </div>
+
+  <!-- Maya -->
+  <div class="member">
+    
+      <img src="images/staff3.png" alt="Maya Hassan" />
+    
+    <div class="name"><a href="staff-maya.html">Maya Hassan</a></div>
+    <div class="role">Facial Specialist</div>
+  </div>
+
+  <!-- Reem -->
+  <div class="member">
+   
+      <img src="images/staff4.png" alt="Reem Al-Anazi" />
+ 
+    <div class="name"><a href="staff-reem.html">Reem Al-Anazi</a></div>
+    <div class="role">Nail Artist</div>
+  </div>
+
+  <!-- Aisha -->
+  <div class="member">
+    
+      <img src="images/staff5.png" alt="Aisha Saleh" />
+    
+    <div class="name"><a href="staff-aisha.html">Aisha Saleh</a></div>
+    <div class="role">Reception</div>
+  </div>
+
+  <!-- Noor -->
+  <div class="member">
+    
+      <img src="images/staff6.png" alt="Noor Khalid" />
+  
+    <div class="name"><a href="staff-noor.html">Noor Khalid</a></div>
+    <div class="role">Makeup Artist</div>
+  </div>
+</div>
+</section>
+
+
+<!-- ===== Join Our Team (Form) ===== -->
+<section class="join-seq"
+ style="background:#FFF8F5;
+  border:2px solid #B0857B;
+   border-radius:15px; 
+   width:85%;
+    margin:50px auto;
+     padding:30px;
+   box-shadow:0 3px 10px rgba(0,0,0,0.05);">
+
+  <div class="form-box" style="padding:60px; width:900px;">
+    <h2>Join Our Team</h2>
+
+<form id="join-us-form" action="#" enctype="multipart/form-data" method="post"
+      onsubmit="return validateJoinForm();"> <!-- phase3 --> 
+
+
+ <label for="first-name">First Name *</label>
+  <input id="first-name" type="text">
+
+<label for="last-name">Last Name *</label>
+<input id="last-name" type="text">
+
+<label for="dob">Date of Birth *</label>
+<input id="dob" type="date">
+
+  <label for="email">Email *</label>
+<input id="email" type="email" placeholder="example@mail.com">
+
+   <label for="education">Education *</label>
+   <input id="education" type="text" placeholder="e.g. Diploma, Bachelor">
+
+ <label for="skills">Skills *</label>
+<input id="skills" type="text" placeholder="e.g. Hair Styling, Customer Service">
+  <label for="experties">Area of Expertise *</label>
+  <input id="experties" type="text" placeholder="e.g. Hair Curling, Massage Therapy, Nail Art">
+
+<div class="photo-upload">
+  <label for="upload-photo" class="photo-box">photo of you 📷</label>
+  <input type="file" id="upload-photo" name="photo" accept="image/*"
+         style="position:absolute; left:-9999px; width:1px; height:1px; opacity:0;">
+</div>
+  
+<label for="message">Message</label>
+  <textarea id="message" placeholder="Write a short message..." rows="4"></textarea>
+
+  <input type="reset" value="Cancel">
+   <input type="submit" value="Submit">
+    </form>
+  </div>
+</section>
+
+</main>
+<!-- ========== Footer ========== -->
+<footer>
+<div class="footer-contact">
+<h2>Contact Us</h2>
+<p>We’d love to hear from you! Whether you have a question about our services, want to book an appointment, or simply need more information, our team is here to help. Reach out to us anytime.</p>
+<p>✆ +96650886681</p>
+<p>✉ BrightSpa@gmail.com</p>
+<br/>
+</div>
+<div class="footer-bottom">
+<hr/>
+<p>© Bright Spa All rights reserved.</p>
+</div>
+</footer>
+</body>
+</html>

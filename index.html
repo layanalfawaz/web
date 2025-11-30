@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bright Spa</title>
+  <link rel="stylesheet" href="style.css" />
+   <style>
+/* ===========================================
+   DESKTOP STYLES (MAIN LAYOUT)
+   =========================================== */
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #FFF8F5;
+  border-bottom: 2px solid #B0857B;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand .logo {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.brand h1 {
+  font-size: 1.9rem;
+  color: #483911;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #5C4033;
+  font-size: 1rem;
+  padding: 4px 0;
+  transition: color .15s ease, border-color .15s ease;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+  color: #B0857B;
+  border-bottom-color: #B0857B;
+}
+
+nav a.active {
+  font-weight: 600;
+  border-bottom-color: #B0857B;
+}
+
+/* Section helpers */
+section {
+  padding: 60px 40px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 18px;
+}
+
+
+/* ========================
+   VISION (DESKTOP)
+   ======================== */
+.vision {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.vision-image img {
+  width: 480px;
+  border-radius: 16px;
+}
+
+.vision-text {
+  max-width: 600px;
+}
+
+/* ========================
+   SERVICES (DESKTOP)
+   ======================== */
+.services h2 {
+  text-align: center;
+  color: #483911;
+}
+
+.service-grid {
+  display: flex;
+  justify-content: center;
+  gap: 50px;           /* slightly larger gap */
+  margin-top: 25px;
+}
+
+.service-card {
+  background: #ffffff;
+  width: 380px;        /* MUCH bigger */
+  padding: 28px;       /* more padding */
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.service-card img {
+  width: 100%;
+  height: 250px;       /* TALLER images */
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.service-card h3 {
+  color: #4B2E2B;
+  margin-top: 14px;
+  font-size: 1.3rem;   /* slightly larger */
+}
+
+
+
+/* ========================
+   REVIEWS (DESKTOP)
+   ======================== */
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));  /* always 3 in a row */
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.review {
+  background: #FFF5F2;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+
+/* ========================
+   FOOTER (DESKTOP)
+   ======================== */
+footer {
+  background: #FFF8F5;
+  padding: 20px;
+  border-top: 2px solid #B0857B;
+}
+
+.footer-bottom {
+  text-align: center;
+}
+
+
+
+/* ===================================================
+   MOBILE  ≤ 768px  (HOME PAGE ONLY)
+   =================================================== */
+
+@media (max-width: 768px) {
+
+    /* ===== MOBILE HEADER – ONE ROW, NO SCROLL ===== */
+    .home-page header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 10px;
+        background: #FFF8F5;
+        border-bottom: 2px solid #B0857B;
+        white-space: nowrap;
+        overflow: hidden;          /* no horizontal scroll */
+        gap: 12px;
+    }
+
+    .home-page .brand {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .home-page .brand .logo {
+        width: 38px;
+        height: 38px;
+    }
+
+    .home-page .brand h1 {
+        font-size: 1.05rem;
+        margin: 0;
+        color: #483911;
+    }
+
+    /* Nav in same row, smaller so everything fits */
+    .home-page nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .home-page nav ul li a {
+        font-size: 0.75rem;
+        padding: 2px 0;
+        border-bottom: 2px solid transparent;
+    }
+
+    .home-page nav ul li a.active,
+    .home-page nav ul li a:hover {
+        border-bottom: 2px solid #B0857B;
+    }
+
+
+    /* ===== VISION (MOBILE) ===== */
+    .home-page .vision {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 16px;
+        gap: 20px;
+    }
+
+    .home-page .vision-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 14px;
+    }
+
+    .home-page .vision-text p {
+        font-size: 0.95rem;
+    }
+
+
+    /* ===== SERVICES (MOBILE) ===== */
+    .home-page .service-grid {
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .home-page .service-card {
+        width: 90%;
+        margin: 0 auto;
+        padding: 18px;
+    }
+
+    .home-page .service-card img {
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+    }
+
+
+    /* ===== REVIEWS (MOBILE) ===== */
+    .home-page .review-grid {
+        display: flex;              /* override desktop grid */
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .home-page .review {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .home-page .review p {
+        font-size: 0.95rem;
+    }
+
+
+    /* ===== FOOTER (MOBILE) ===== */
+    .home-page footer {
+        text-align: center;
+        padding: 20px 5%;
+        background: #FFF8F5;
+        border-top: 2px solid #B0857B;
+    }
+}
+
+
+
+/* ==================================
+   EXTRA SMALL PHONES ≤ 480px
+   ================================== */
+
+@media (max-width: 480px) {
+
+  .home-page .brand h1 {
+    font-size: 0.95rem;
+  }
+
+  .home-page nav a {
+    font-size: 0.7rem;
+  }
+
+  .home-page .service-card img {
+    height: 180px;
+  }
+
+  .home-page .vision-text p,
+  .home-page .review p {
+    font-size: 0.85rem;
+  }
+}
+
+   </style>
+</head>
+
+<body class="home-page">
+  <!-- ========== Header ========== -->
+  <header>
+    <div class="brand">
+      <img src="images/logo1.png" alt="Bright Spa Logo" class="logo"/>
+      <h1>Bright Spa</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index1.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="customer.html">Customer</a></li>
+        <li><a href="provider.html">Provider</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Theme toggle (Home page only) -->
+<div class="theme-toggle">
+  <span class="theme-label"></span>
+  <label class="theme-switch">
+    <input type="checkbox" id="themeToggle">
+    <span class="slider"></span>
+  </label>
+</div>
+
+  <!-- ========== Vision ========== -->
+  <section class="vision">
+    <div class="vision-image">
+      <img src="images/vision.avif" alt="Bright Spa interior"/>
+    </div>
+    <div class="vision-text">
+      <h2>Vision</h2>
+      <p>
+        At Bright Spa, our vision is to create a peaceful sanctuary where wellness, beauty, and relaxation come together. We aspire to offer more than just treatments, we aim to deliver transformative experiences that rejuvenate the body, calm the mind, and uplift the spirit. Our goal is to become a trusted destination where every guest feels valued, refreshed, and inspired to embrace a balanced, healthy lifestyle.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== Services ========== -->
+<section class="services">
+  <h2>Services</h2>
+  <div class="service-grid">
+
+    <div class="service-card">
+      <img src="images/nails.avif" alt="Nail Services">
+      <h3>Nail Services</h3>
+      <p class="info">Professional manicures and pedicures to keep your hands and feet beautiful.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="images/hair.avif" alt="Hair Services">
+      <h3>Hair Services</h3>
+      <p class="info">Haircuts, coloring, and treatments designed to boost your confidence.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="images/massage.avif" alt="Massage Services">
+      <h3>Massage Services</h3>
+      <p class="info">Relaxing massages to relieve stress and refresh your body.</p>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- ========== Reviews ========== -->
+  <section class="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="review-grid">
+      <div class="review"><p>I had a wonderful experience at Bright Spa. From the moment I arrived, the staff were welcoming and attentive, making sure I felt relaxed and cared for. The treatments were excellent, and the atmosphere was calm and inviting. I left feeling refreshed and can’t wait to return!</p><p style="text-align: right;">⭐ 5 - Reem Almansour</p></div>
+      <div class="review"><p>Bright Spa exceeded my expectations. The services were top quality, and the team made sure I was comfortable throughout my visit. The space is beautiful and peaceful, and I truly felt like I was being pampered. Highly recommend to anyone looking for a relaxing escape!</p><p style="text-align: right;">⭐ 5 - Shahad Alhedari</p></div>
+      <div class="review"><p>My visit to Bright Spa was truly exceptional. From the moment I walked in, I was welcomed with warmth and care, and every part of the experience was thoughtfully designed. The treatments were relaxing and refreshing, and the staff went above and beyond to ensure my comfort. </p><p style="text-align: right;">⭐ 5 - Baylisan Ibrahim</p></div>
+    </div>
+  </section>
+
+  <!-- ========== Footer ========== -->
+  <footer>
+  <div class="footer-contact">
+    <h2>Contact Us</h2>
+    <p>
+      We’d love to hear from you! Whether you have a question about our services, want to book an appointment, or simply need more information, our team is here to help. Reach out to us anytime.
+    </p>
+    <p>✆ +96650886681</p>
+    <p>✉ BrightSpa@gmail.com</p>
+    <br>
+  </div>
+
+  <div class="footer-bottom">
+    <hr>
+    <p id="clock"></p>
+    <p>© Bright Spa All rights reserved.</p>
+  </div>
+</footer>
+<button id="backToTop">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

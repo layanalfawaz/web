@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bright Spa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ========== Header ========== -->
+  <header>
+    <div class="brand">
+      <img src="images/logo1.png" alt="Bright Spa Logo" class="logo"/>
+      <h1>Bright Spa</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index1.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="customer.html">Customer</a></li>
+        <li><a href="provider.html">Provider</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+     <!-- Breadcrumb (fixed: no inline styles) -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="index1.html">Home</a></li>
+    <li aria-hidden="true">›</li>
+    <li aria-current="page">Services</li>
+  </ol>
+</nav>
+    <!-- Top bar: breadcrumb + search + sort -->
+    <section class="services services-page" aria-labelledby="services-title">
+
+      <!-- Title + search + sort -->
+      <div style="display:flex; align-items:flex-end; gap:16px; flex-wrap:wrap; justify-content:space-between">
+
+        <!-- Search -->
+        <form class="search-form" role="search" style="flex:1; min-width:260px; max-width:420px;">
+          <input
+            type="search"
+            id="service-search"
+            name="q"
+            placeholder="Search"
+            aria-label="Search services"
+            style="width:100%; padding:10px 14px; border-radius:10px; border:1px solid #B0857B;" 
+          />
+        </form>
+
+        <!-- Sort with optgroup -->
+        <div class="sort-box" style="display:flex; align-items:center; gap:8px;">
+          <label for="sort-services" style="font-weight:600;">Sort by</label>
+          <select id="sort-services" name="sort-services" style="padding:10px 12px; border-radius:10px; border:1px solid #B0857B;">
+            <optgroup label="Price">
+              <option value="price-low-high">Low → High</option>
+              <option value="price-high-low">High → Low</option>
+            </optgroup>
+            <optgroup label="Name">
+              <option value="name-az">A → Z</option>
+              <option value="name-za">Z → A</option>
+            </optgroup>
+          </select>
+        </div>
+      </div>
+
+      <!-- Services grid -->
+      <div class="service-grid" id="servicesGrid" style="margin-top:24px">
+
+        <!-- 1 -->
+        <article class="service-card" data-name="Hair Treatment" data-price="260">
+          <div class="card-media" style="position:relative;">
+            <img src="images/Hair Treatment.jpg" alt="Hair Treatment" />
+            <button class="fav" type="button" aria-label="Save Hair Treatment" title="Save"
+                    style="position:absolute; top:10px; right:10px; background:transparent; border:0; font-size:20px; cursor:pointer;">♡</button>
+          </div>
+          <h3>Hair Treatment</h3>
+          <p class="price"><strong>260</strong> <span>$</span></p>
+          <p class="desc">Nourishing masks and repair treatments to restore shine and strength.</p>
+        </article>
+
+        <!-- 2 -->
+        <article class="service-card" data-name="Nail Removal" data-price="80">
+          <div class="card-media" style="position:relative;">
+            <img src="images/nails.avif" alt="Nail Removal" />
+            <button class="fav" type="button" aria-label="Save Nail Removal" title="Save"
+                    style="position:absolute; top:10px; right:10px; background:transparent; border:0; font-size:20px; cursor:pointer;">♡</button>
+          </div>
+          <h3>Nail Removal</h3>
+          <p class="price"><strong>80</strong> <span>$</span></p>
+          <p class="desc">Safe removal with gentle care to protect natural nails.</p>
+        </article>
+
+        <!-- 3 -->
+        <article class="service-card" data-name="Swedish Massage" data-price="180">
+          <div class="card-media" style="position:relative;">
+            <img src="images/Swedish Massage.jpg" alt="Swedish Massage" />
+            <button class="fav" type="button" aria-label="Save Swedish Massage" title="Save"
+                    style="position:absolute; top:10px; right:10px; background:transparent; border:0; font-size:20px; cursor:pointer;">♡</button>
+          </div>
+          <h3>Swedish Massage</h3>
+          <p class="price"><strong>180</strong> <span>$</span></p>
+          <p class="desc">Relaxing, full-body technique to relieve stress and improve circulation.</p>
+        </article>
+
+        <!-- 4 -->
+        <article class="service-card" data-name="Hair Cut" data-price="120">
+          <div class="card-media" style="position:relative;">
+            <img src="images/Hair Cut.jpg" alt="Hair Cut" />
+            <button class="fav" type="button" aria-label="Save Hair Cut" title="Save"
+                    style="position:absolute; top:10px; right:10px; background:transparent; border:0; font-size:20px; cursor:pointer;">♡</button>
+          </div>
+          <h3>Hair Cut</h3>
+          <p class="price"><strong>120</strong> <span>$</span></p>
+          <p class="desc">Tailored cuts and blow-dry styling to refresh your look.</p>
+        </article>
+
+        <!-- 5 -->
+        <article class="service-card" data-name="Acrylic Nails" data-price="150">
+          <div class="card-media" style="position:relative;">
+            <img src="images/nail acrlic.jpg" alt="Acrylic Nails" />
+            <button class="fav" type="button" aria-label="Save Acrylic Nails" title="Save"
+                    style="position:absolute; top:10px; right:10px; background:transparent; border:0; font-size:20px; cursor:pointer;">♡</button>
+          </div>
+          <h3>Nail Acrylic</h3>
+          <p class="price"><strong>150</strong> <span>$</span></p>
+          <p class="desc">Durable extensions with elegant shapes and natural finishes.</p>
+        </article>
+
+        <!-- 6 -->
+        <article class="service-card" data-name="Wood Massage" data-price="200">
+          <div class="card-media" style="position:relative;">
+            <img src="images/massage.avif" alt="Wood Massage" />
+            <button class="fav" type="button" aria-label="Save Wood Massage" title="Save"
+                    style="position:absolute; top:10px; right:10px; background:transparent; border:0; font-size:20px; cursor:pointer;">♡</button>
+          </div>
+          <h3>Wood Massage</h3>
+          <p class="price"><strong>200</strong> <span>$</span></p>
+          <p class="desc">Sculpting technique using wooden tools to tone and relax the body.</p>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== Footer ========== -->
+  <footer>
+    <div class="footer-contact">
+      <h2>Contact Us</h2>
+      <p>
+        We’d love to hear from you! Whether you have a question about our services, want to book an appointment, or simply need more information, our team is here to help. Reach out to us anytime.
+      </p>
+      <p>✆ +96650886681</p>
+      <p>✉ BrightSpa@gmail.com</p>
+      <br>
+    </div>
+
+    <div class="footer-bottom">
+      <hr>
+      <p>© Bright Spa All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

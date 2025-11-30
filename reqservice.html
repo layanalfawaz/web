@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bright Spa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<script src="script.js"></script>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="brand">
+      <img src="images/logo1.png" alt="Bright Spa Logo" class="logo"/>
+      <h1>Bright Spa</h1>
+    </div>
+
+    <nav>
+      <ul>
+     <li><a href="index1.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="customer.html" class="active">Customer</a></li>
+        <li><a href="provider.html">Provider</a></li>
+      </ul>
+    </nav>
+  </header>
+
+   <!-- Breadcrumb -->
+   <nav class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:16px">
+      <ol style="list-style:none; display:flex; gap:8px;">
+     <li><a href="index1.html">Home</a></li>
+       <li aria-hidden="true">›</li>
+        <li><a href="customer.html">Customer</a></li>
+       <li aria-hidden="true">›</li>
+       <li aria-current="page">Request Service</li>
+ </ol>
+    </nav>
+
+
+  <!-- Request a Service Form -->
+  <section class="request-section">
+    <div class="form-box">
+      <h2>Request a Service</h2>
+      
+      <form class="request-form" action="reqservice.html">
+        <label for="service">Select Service:</label>
+    <select id="service">
+         <option>Select Service:</option>
+        <option>Hair Treatment</option>
+     <option>Hair Cut</option>
+          <option>Wood Massage</option>
+       <option>Swedish Massage</option>
+          <option>Nail Removal</option>
+           <option>Acrylic Nails</option>
+        </select>
+
+        <label for="name">Customer Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+   <label for="date">Due Date:</label>
+    <input type="date" id="date">
+        <label for="desc">Request Description:</label>
+        <textarea id="desc" rows="3" placeholder="Describe your request..."></textarea>
+
+        <input type="submit" value="Submit Request" >
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-contact">
+      <h2>Contact Us</h2>
+      <p>
+        We’d love to hear from you! Whether you have a question about our services,
+        want to book an appointment, or simply need more information,
+        our team is here to help. Reach out to us anytime.
+      </p>
+      <p>✆ +96650886681</p>
+      <p>✉ BrightSpa@gmail.com</p>
+      <br>
+    </div>
+
+    <div class="footer-bottom">
+      <hr>
+      <p>© Bright Spa All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+
+<title>Add a New Service</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<!-- ========== Header ========== -->
+  <header>
+    <div class="brand">
+      <img src="images/logo1.png" alt="Bright Spa Logo" class="logo"/>
+      <h1>Bright Spa</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index1.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="customer.html">Customer</a></li>
+        <li><a href="Provider.html"class="active" >Provider</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:16px">
+  <ol style="list-style:none; display:flex; gap:8px;">
+      <li><a href="index1.html">Home</a></li>
+        <li aria-hidden="true">›</li>
+         <li><a href="Provider.html">Provider</a></li>
+        <li aria-hidden="true">›</li>
+      <li aria-current="page">Add Service</li>
+</ol>
+  </nav>
+
+
+
+  <main class="page-wrap">
+ <section class="AddService-container">
+  <div class="form-box">
+   
+
+    <form action="addService.html" method="post" enctype="multipart/form-data">
+    <h2>Add New Service</h2>
+
+      <div class="photo-upload">
+  <label for="upload-photo" class="photo-box">📷</label>
+  <input type="file" id="upload-photo" name="photo" accept="image/*"
+         style="position:absolute; left:-9999px; width:1px; height:1px; opacity:0;">
+</div>
+      <label for="service-name">Service Name:</label>
+      <input type="text" id="service-name" name="service-name">
+
+      <label for="price">Price:</label>
+      <input type="text" id="price" name="price">
+
+      <label for="description">Services Description:</label>
+      <textarea id="description" name="description" rows="4" cols="64" placeholder="Write here..."></textarea>
+
+      <input type="button" id="cancel-btn" value="Cancel" onclick="cancelAddService()">
+	  
+   <input  type="submit"  value=Add>
+      
+    </form>
+  </div>
+</section>
+
+
+</main> 
+  <script src="script.js"></script>
+ 
+  
+  
+  
+  
+    <!-- ========== Footer ========== -->
+  <footer>
+  <div class="footer-contact">
+    <h2>Contact Us</h2>
+    <p>
+      We’d love to hear from you! Whether you have a question about our services, want to book an appointment, or simply need more information, our team is here to help. Reach out to us anytime.
+    </p>
+    <p>✆ +96650886681</p>
+    <p>✉ BrightSpa@gmail.com</p>
+    <br>
+  </div>
+
+  <div class="footer-bottom">
+    <hr>
+    <p>© Bright Spa All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

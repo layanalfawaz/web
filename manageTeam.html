@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Manage Team Members</title>
+<link rel="stylesheet" href="style.css" />
+<body>
+<!-- ========== Header ========== -->
+  <header>
+    <div class="brand">
+      <img src="images/logo1.png" alt="Bright Spa Logo" class="logo"/>
+      <h1>Bright Spa</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index1.html" >Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="customer.html">Customer</a></li>
+        <li><a href="Provider.html"class="active" >Provider</a></li>
+      </ul>
+    </nav>
+  </header>
+   <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom:16px">
+  <ol style="list-style:none; display:flex; gap:8px;">
+      <li><a href="index1.html">Home</a></li>
+        <li aria-hidden="true">›</li>
+         <li><a href="Provider.html">Provider</a></li>
+        <li aria-hidden="true">›</li>
+      <li aria-current="page">Manage Team</li>
+</ol>
+  </nav>
+
+  
+<main>
+
+  <main class="page-wrap">
+  <!-- Section 1: Manage existing staff-->
+<section class="ManageStaff-container staff-list-section">
+ <div class="section-head">
+  <h2>Manage Staff Members</h2>
+ 
+  <input type="submit" class="button danger-btn" value="Delete" style="margin-bottom: 10px;">
+  
+ </div>
+
+<form method="post" action="manageTeam.html" class="staff-form">
+  <div class="staff-box">
+    <div class="staff-list" aria-label="Staff members">
+
+      <label class="staff-card">
+        <div class="staff-left">
+          <div class="photo-thumb">
+            <img src="images/staff1.PNG" class="photo-img" alt="">
+          </div>
+          <div class="staff-name">Sarah Ahmed</div>
+        </div>
+        <input type="checkbox" name="staff1" value="1" class="staff-check">
+      </label>
+
+      <label class="staff-card">
+        <div class="staff-left">
+          <div class="photo-thumb">
+            <img src="images/staff2.PNG" class="photo-img" alt="">
+          </div>
+          <div class="staff-name">Lina Al-Harbi</div>
+        </div>
+        <input type="checkbox" name="staff2" value="2" class="staff-check">
+      </label>
+
+      <label class="staff-card">
+        <div class="staff-left">
+          <div class="photo-thumb">
+            <img src="images/staff5.PNG" class="photo-img" alt="">
+          </div>
+          <div class="staff-name">Aisha Saleh</div>
+        </div>
+        <input type="checkbox" name="staff3" value="3" class="staff-check">
+      </label>
+
+      <label class="staff-card">
+        <div class="staff-left">
+          <div class="photo-thumb">
+            <img src="images/staff6.PNG" class="photo-img" alt="">
+          </div>
+          <div class="staff-name">Noor Khalid</div>
+        </div>
+        <input type="checkbox" name="staff4" value="4" class="staff-check">
+      </label>
+
+      <label class="staff-card">
+        <div class="staff-left">
+          <div class="photo-thumb">
+            <img src="images/staff3.PNG" class="photo-img" alt="">
+          </div>
+          <div class="staff-name">Maya Hassan</div>
+        </div>
+        <input type="checkbox" name="staff5" value="5" class="staff-check">
+      </label>
+
+      <label class="staff-card">
+        <div class="staff-left">
+          <div class="photo-thumb">
+ <img src="images/staff4.PNG" class="photo-img" alt="">
+</div>
+<div class="staff-name">Reem Al-Anazi</div>
+</div>
+<input type="checkbox" name="staff6" value="6" class="staff-check">
+</label>
+
+    </div>
+  </div>
+</form>
+</section>
+
+
+
+
+  <!-- Section 2: Add a new member -->
+  <section class="ManageStaff-seq"
+   style=
+  "background: #FFF8F5;
+  border: 2px solid #B0857B;
+  border-radius: 15px;  
+  width: 85%;
+  margin: 50px auto;
+  padding: 30px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);"
+  
+ 
+  background-color: #5a433d !important;
+  color: #f8f1ec !important;
+  border-color: #d0b4a8 !important;
+>
+
+    <div class="form-box" style="padding: 60px; width: 900px;">
+    <h2>Add Staff Member</h2>
+
+ <form action="manageTeam.html" method="post" enctype="multipart/form-data">
+ 
+   <div class="photo-upload">
+  <label for="upload-photo" class="photo-box">📷</label>
+  <input type="file" id="upload-photo" name="photo" accept="image/*"
+         style="position:absolute; left:-9999px; width:1px; height:1px; opacity:0;">
+</div>
+  
+
+    <label for="full-name">Full Name:</label>
+    <input id="full-name" type="text" name="name"><br>
+
+    <label for="dob">Date of Birth:</label>
+<input id="dob" type="date" name="dob">
+
+    <label for="email">Email:</label>
+    <input id="email" type="email" name="email">
+
+    <label for="education">Education:</label>
+    <input id="education" type="text" name="education">
+
+   <label for="expertise">Area of expertise:</label>
+   <textarea id="expertise" name="expertise" rows="3" placeholder="Write here..." ></textarea>
+
+    <label for="skills">Skills:</label>
+    <textarea id="skills" name="skills" rows="3" placeholder="Write here..." ></textarea>
+     <input type="button" value="cancel">
+   <input  type="submit"  value=Add>
+
+   </div>
+
+ </form>
+</section>
+
+
+</main>
+
+  
+  
+   
+    <!-- ========== Footer ========== -->
+  <footer>
+  <div class="footer-contact">
+    <h2>Contact Us</h2>
+    <p>
+      We’d love to hear from you! Whether you have a question about our services, want to book an appointment, or simply need more information, our team is here to help. Reach out to us anytime.
+    </p>
+    <p>✆ +96650886681</p>
+    <p>✉ BrightSpa@gmail.com</p>
+    <br>
+  </div>
+
+  <div class="footer-bottom">
+    <hr>
+    <p>© Bright Spa All rights reserved.</p>
+  </div>
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>
